@@ -1,51 +1,61 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
-export const ModalPopup = ({ modalSwitch }) => {
-  const onCloseModal = (e) => {
-    if (e.target === e.currentTarget) {
-      modalSwitch();
-    }
+const Tab = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const tabClickHandler = (index) => {
+    setActiveIndex(index);
   };
 
-  useEffect(() => {
-    document.body.style.cssText = `
-      position: fixed; 
-      top: -${window.scrollY}px;
-      overflow-y: scroll;
-      width: 100%;`;
-    return () => {
-      const scrollY = document.body.style.top;
-      document.body.style.cssText = '';
-      window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
-    };
-  }, []);
+  const tabArray = [
+    {
+      idx: 0,
+      tabTitle: (
+        <div
+          className={activeIndex === 0 ? 'is-active' : ''}
+          onClick={() => tabClickHandler(0)}
+        >
+          TAB1
+        </div>
+      ),
+      tabcontent: <div>내용물1</div>,
+    },
+    {
+      idx: 1,
+      tabTitle: (
+        <div
+          className={activeIndex === 1 ? 'is-active' : ''}
+          onClick={() => tabClickHandler(1)}
+        >
+          TAB2
+        </div>
+      ),
+      tabcontent: <div>내용물3</div>,
+    },
+    {
+      idx: 2,
+      tabTitle: (
+        <div
+          className={activeIndex === 2 ? 'is-active' : ''}
+          onClick={() => tabClickHandler(2)}
+        >
+          TAB3
+        </div>
+      ),
+      tabcontent: <div>내용물3</div>,
+    },
+  ];
 
   return (
-    <di className='Modaldim' onClick={onCloseModal}>
-      <div className='ModalPopup'>
-        <button onClick={onCloseModal}>X</button>
-        <p>HELLO CODESTATES!</p>
-      </div>
-    </di>
+    <div className='ContainerBox'>
+      <ul>
+        {tabArray.map((section) => {
+          return <li key={section.idx}>{section.tabTitle}</li>;
+        })}
+      </ul>
+      <div>{tabArray[activeIndex].tabcontent}</div>
+    </div>
   );
 };
 
-const Modal = () => {
-  const [Toggle, setToggle] = useState(false); // 버튼의 상태를 관리 하기위한것
-
-  const modalSwitch = () => {
-    setToggle(!Toggle); // 토글 이벤트
-  };
-
-  return (
-    <section className='ContainerBox'>
-      <button className='Modal_btn' onClick={modalSwitch}>
-        OPEN Modal
-      </button>
-      {Toggle && <ModalPopup modalSwitch={modalSwitch} />}
-      {/* 모달로 띄우고 싶은 컨텐츠를 부분렌더링을 이용하여 컨트롤한다. */}
-    </section>
-  );
-};
-
-export default Modal;
+export default Tab;

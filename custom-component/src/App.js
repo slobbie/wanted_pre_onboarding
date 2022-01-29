@@ -2,8 +2,8 @@ import './App.css';
 import React from 'react';
 import Toggle from './component/Toggle';
 import Header from './layout/Header';
-
-import Modal from './component/Tab';
+import Modal from './component/Modal';
+import Tab from './component/Tab';
 
 function App() {
   return (
@@ -12,6 +12,7 @@ function App() {
         <Header />
         <Toggle />
         <Modal />
+        <Tab />
       </div>
     </div>
   );
