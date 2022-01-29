@@ -1,18 +1,6 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-// const ToggleBox = styled.div`
-//   margin-top: 100px;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   margin: 0 auto;
-//   justify-content: center;
-//   width: 80%;
-//   height: 300px;
-//   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-// `;
-
 const ToggleSwitchBox = styled.div`
   width: 100px;
   height: 40px;
@@ -28,10 +16,10 @@ const ToggleButton = styled.button`
   display: block;
   border: none;
   border-radius: 15px;
-  position: absolute;
+  position: relative;
   cursor: pointer;
-  top: 29%;
-  margin: 5px;
+  top: -42px;
+  margin: 7px;
   z-index: 5;
 `;
 
@@ -41,18 +29,17 @@ const ToggleText = styled.span`
 `;
 
 const Toggle = () => {
-  // const [text, setText] = useState('OFF');
-  const [toggle, setToggle] = useState(false);
-  const text = toggle ? 'ON' : 'OFF';
+  const [toggle, setToggle] = useState(false); // Toggle switch 를 관리하는 상태
+  const text = toggle ? 'ON' : 'OFF'; // toggle 의 상태를 변수로 담아 부분렌더링
 
   const onToggle = () => {
     setToggle(!toggle);
-  };
+  }; // Toggle 이벤트
 
   return (
     <section className='ContainerBox'>
       <ToggleSwitchBox onClick={onToggle}>
-        <div className={`boxiner ${toggle ? 'swichOn' : 'switchOff'}`}></div>
+        <div className={`boxiner ${toggle ? 'swichOn' : 'switchOff'}`} />
         <ToggleButton
           onClick={onToggle}
           className={toggle ? 'buttonOn' : 'buttonOff'}
