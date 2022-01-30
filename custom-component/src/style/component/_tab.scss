@@ -1,0 +1,59 @@
+.tabPage {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 100px auto;
+  justify-content: flex-start;
+  width: 80%;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.tabBox {
+  display: flex;
+  width: 100%;
+}
+
+.Tabmenu {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 50px;
+
+  li {
+    background-color: #e0e0e0;
+    width: 34%;
+    div {
+      height: 100%;
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
+
+.tab_h2 {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.tabcontBox {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 200px;
+  margin: 10%;
+}
+
+.tabs_select {
+  background-color: #5100d7;
+  box-shadow: inset 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: opacity 0.3s ease;
+}
+
+.tabs_noneSelect {
+  opacity: 0.3;
+}

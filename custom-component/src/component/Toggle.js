@@ -37,15 +37,18 @@ const Toggle = () => {
   }; // Toggle 이벤트
 
   return (
-    <section className='ContainerBox'>
-      <ToggleSwitchBox onClick={onToggle}>
-        <div className={`boxiner ${toggle ? 'swichOn' : 'switchOff'}`} />
-        <ToggleButton
-          onClick={onToggle}
-          className={toggle ? 'buttonOn' : 'buttonOff'}
-        />
-      </ToggleSwitchBox>
-      <ToggleText>Toggle switch {text} </ToggleText>
+    <section className='togglePage'>
+      <h2 className='toggle_h2'>Toggle</h2>
+      <div className='contentBox'>
+        <ToggleSwitchBox onClick={onToggle}>
+          <div className={`boxiner ${toggle ? 'swichOn' : 'switchOff'}`} />
+          <ToggleButton
+            onClick={onToggle}
+            className={toggle ? 'buttonOn' : 'buttonOff'}
+          />
+        </ToggleSwitchBox>
+        <ToggleText>Toggle switch {text} </ToggleText>
+      </div>
     </section>
   );
 };

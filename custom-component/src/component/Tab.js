@@ -12,49 +12,58 @@ const Tab = () => {
       idx: 0,
       tabTitle: (
         <div
-          className={activeIndex === 0 ? 'is-active' : ''}
+          className={
+            activeIndex === 0 ? 'is-active tabs_select' : 'tabs_noneSelect'
+          }
           onClick={() => tabClickHandler(0)}
         >
           TAB1
         </div>
       ),
-      tabcontent: <div>내용물1</div>,
+      tabcontent: <div>Tab menu ONE</div>,
     },
     {
       idx: 1,
       tabTitle: (
         <div
-          className={activeIndex === 1 ? 'is-active' : ''}
+          className={
+            activeIndex === 1 ? 'is-active tabs_select' : 'tabs_noneSelect'
+          }
           onClick={() => tabClickHandler(1)}
         >
           TAB2
         </div>
       ),
-      tabcontent: <div>내용물3</div>,
+      tabcontent: <div>Tab menu TWO</div>,
     },
     {
       idx: 2,
       tabTitle: (
         <div
-          className={activeIndex === 2 ? 'is-active' : ''}
+          className={
+            activeIndex === 2 ? 'is-active tabs_select' : 'tabs_noneSelect'
+          }
           onClick={() => tabClickHandler(2)}
         >
           TAB3
         </div>
       ),
-      tabcontent: <div>내용물3</div>,
+      tabcontent: <div>Tab menu THREE</div>,
     },
   ];
 
   return (
-    <div className='ContainerBox'>
-      <ul>
-        {tabArray.map((section) => {
-          return <li key={section.idx}>{section.tabTitle}</li>;
-        })}
-      </ul>
-      <div>{tabArray[activeIndex].tabcontent}</div>
-    </div>
+    <section className='tabPage'>
+      <div className='tabBox'>
+        <h2 className='tab_h2'>Tab</h2>
+        <ul className='Tabmenu'>
+          {tabArray.map((section) => {
+            return <li key={section.idx}>{section.tabTitle}</li>;
+          })}
+        </ul>
+      </div>
+      <div className='tabcontBox'>{tabArray[activeIndex].tabcontent}</div>
+    </section>
   );
 };
 

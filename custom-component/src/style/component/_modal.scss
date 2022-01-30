@@ -1,3 +1,22 @@
+.modalPage {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  // align-items: center;
+  margin: 100px auto;
+  // justify-content: flex-start;
+  width: 80%;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+.modalBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 10%;
+}
 .Modal_btn {
   color: white;
   background-color: #4d00ce;
@@ -7,6 +26,10 @@
   width: 150px;
   height: 50px;
   cursor: pointer;
+}
+
+.modal_h2 {
+  margin-left: 10px;
 }
 
 .Modaldim {

@@ -38,12 +38,15 @@ const Modal = () => {
   };
 
   return (
-    <section className='ContainerBox'>
-      <button className='Modal_btn' onClick={modalSwitch}>
-        OPEN Modal
-      </button>
-      {Toggle && <ModalPopup modalSwitch={modalSwitch} />}
-      {/* 모달로 띄우고 싶은 컨텐츠를 부분렌더링을 이용하여 컨트롤한다. */}
+    <section className='modalPage'>
+      <h2 className='modal_h2'>Modal</h2>
+      <div className='modalBox'>
+        <button className='Modal_btn' onClick={modalSwitch}>
+          OPEN Modal
+        </button>
+        {Toggle && <ModalPopup modalSwitch={modalSwitch} />}
+        {/* 모달로 띄우고 싶은 컨텐츠를 부분렌더링을 이용하여 컨트롤한다. */}
+      </div>
     </section>
   );
 };
