@@ -14,6 +14,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 50%;
   height: auto;
@@ -66,4 +67,8 @@
   height: 40px;
   border: none;
   outline: none;
+}
+.tagInput::placeholder {
+  font-size: 5vh;
+  opacity: 0.5;
 }

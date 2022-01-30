@@ -1,0 +1,41 @@
+.AutoCompleteSect {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  margin: 100px auto;
+  width: 80%;
+  height: 300px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.Auto_h2 {
+  margin-left: 10px;
+}
+
+.searchBox {
+  display: flex;
+  width: 99%;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  margin: 0 auto;
+  margin-top: 10%;
+  height: 35px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 15px;
+
+  button {
+    background-color: white;
+    border: none;
+    width: 20px;
+    height: 20px;
+  }
+}
+
+.search_input {
+  width: 90%;
+  height: 30px;
+  margin-left: 10px;
+  border: none;
+  outline: none;
+}
