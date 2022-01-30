@@ -10,7 +10,7 @@ const Tag = () => {
   const [hashTags, setHashTags] = useState([
     {
       id: 1,
-      tag: '안녕',
+      tag: '',
     },
   ]);
 
@@ -46,12 +46,13 @@ const Tag = () => {
 
   return (
     <section className='tagSection'>
-      <h2>Tag</h2>
+      <h2 className='tag_h2'>Tag</h2>
+
       <div className='tagBox'>
-        {hashTags.map((tag) => {
+        {hashTags.map((tag, index) => {
           return (
             <div className='tag' key={tag.id}>
-              {tag.tag}
+              <p>{tag.tag}</p>
               <button onClick={() => onRemove(tag.id)}>x</button>
             </div>
           );
