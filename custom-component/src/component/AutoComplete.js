@@ -79,20 +79,3 @@ const AutoComplete = () => {
 };
 
 export default AutoComplete;
-
-// const AutoComplete = () => {
-//   const [inputText, setInputText] = useState('');
-//   const data = [
-//     '중고A급',
-//     'refurbished',
-//     'antique',
-//     'rustic',
-//     'remove',
-//     'rock',
-//   ];
-
-//   const currentInputText = (e) => {
-//     setInputText(e.target.value);
-//   };
-
-//   const eraseInput = () => {
