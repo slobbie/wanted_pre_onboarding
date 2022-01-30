@@ -30,14 +30,14 @@ const AutoComplete = () => {
     'sun',
     'stone',
   ];
-  const matchName = (name, keyword) => {
+  const connectName = (name, keyword) => {
     name = name.toLowerCase().substring(0, keyword.length);
     if (keyword === '') return false;
     return name === keyword.toString().toLowerCase();
   };
   const onChange = (e) => {
     const result = data
-      .filter((item) => matchName(item, e.target.value))
+      .filter((item) => connectName(item, e.target.value))
       .sort((a, b) => a.length - b.length);
     setSearchData(result);
     setValueData(e.target.value);
