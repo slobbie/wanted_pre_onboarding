@@ -10,7 +10,7 @@ const Tag = () => {
   const [hashTags, setHashTags] = useState([
     {
       id: 1,
-      tag: '',
+      tag: 'CodeStates',
     },
   ]);
 
