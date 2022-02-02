@@ -1,13 +1,5 @@
-.togglePage {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  // align-items: center;
-  margin: 100px auto;
-  // justify-content: flex-start;
-  width: 80%;
-  height: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+.toggleSection {
+  @include sectionStyle;
 }
 
 .contentBox {
@@ -22,6 +14,33 @@
   display: flex;
   margin-left: 10px;
   justify-content: flex-start;
+}
+
+.toggleSwitchBox {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: $background-color2;
+}
+
+.toggleButton {
+  width: 30px;
+  height: 30px;
+  display: block;
+  border: none;
+  border-radius: 15px;
+  position: relative;
+  cursor: pointer;
+  top: -42px;
+  margin: 7px;
+  z-index: 5;
+}
+
+.toggleText {
+  display: block;
+  margin-top: 10px;
 }
 .buttonOn {
   transform: translateX(55px);
@@ -43,7 +62,7 @@
   transform: translateX(100px);
   transition: 1.1s;
   position: relative;
-  background-color: tomato;
+  background-color: $background-color1;
   z-index: 2;
 }
 
@@ -52,5 +71,5 @@
   transition: 2.3s;
   position: relative;
   z-index: 2;
-  background-color: #c5c5c5;
+  background-color: $background-color2;
 }

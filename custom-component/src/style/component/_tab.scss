@@ -1,4 +1,4 @@
-.tabPage {
+.tabSection {
   margin-top: 100px;
   display: flex;
   flex-direction: column;
@@ -21,7 +21,7 @@
   height: 50px;
 
   li {
-    background-color: #e0e0e0;
+    background-color: $color-white2;
     width: 34%;
     div {
       height: 100%;
@@ -49,7 +49,7 @@
 }
 
 .tabs_select {
-  background-color: #5100d7;
+  background-color: $background-color1;
   box-shadow: inset 4px 8px 0 rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
 }

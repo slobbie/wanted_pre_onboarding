@@ -38,7 +38,7 @@ const Modal = () => {
   };
 
   return (
-    <section className='modalPage'>
+    <section className='modalSection'>
       <h2 className='modal_h2'>Modal</h2>
       <div className='modalBox'>
         <button className='Modal_btn' onClick={modalSwitch}>

@@ -53,7 +53,7 @@ const Tab = () => {
   ];
 
   return (
-    <section className='tabPage'>
+    <section className='tabSection'>
       <div className='tabBox'>
         <h2 className='tab_h2'>Tab</h2>
         <ul className='Tabmenu'>

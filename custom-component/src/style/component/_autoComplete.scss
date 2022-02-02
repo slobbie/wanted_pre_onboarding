@@ -1,11 +1,5 @@
 .AutoCompleteSect {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: column;
-  margin: 100px auto;
-  width: 80%;
-  height: 300px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  @include sectionStyle;
 }
 
 .Auto_h2 {
@@ -26,7 +20,7 @@
   box-shadow: 2px 4px 4px rgba(0, 0, 0, 0.1);
 
   button {
-    background-color: white;
+    background-color: $color-white1;
     border: none;
     width: 20px;
     height: 20px;
@@ -55,6 +49,6 @@
 }
 
 .serchdataList:hover {
-  background-color: #e0e0e0;
+  background-color: $color-white2;
   opacity: 0.8;
 }
