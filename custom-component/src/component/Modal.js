@@ -5,7 +5,7 @@ export const ModalPopup = ({ modalSwitch }) => {
     if (e.target === e.currentTarget) {
       modalSwitch();
     }
-  };
+  }; // 모달 창을 제외한 화면을 눌렀을시에 모달창을 닫기위한 이벤트
 
   useEffect(() => {
     document.body.style.cssText = `
@@ -18,7 +18,7 @@ export const ModalPopup = ({ modalSwitch }) => {
       document.body.style.cssText = '';
       window.scrollTo(0, parseInt(scrollY || '0', 10) * -1);
     };
-  }, []);
+  }, []); // 모달을 제외한 스크린의 스크롤을 막기위한 이벤트
 
   return (
     <di className='Modaldim' onClick={onCloseModal}>

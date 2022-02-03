@@ -1,28 +1,28 @@
 import { useState } from 'react';
 
-const ClickToEdit = () => {
+const ClickToEdit = (prop, ref) => {
   const [name, setName] = useState('김코딩');
   const [age, setAge] = useState('20');
 
   const nameMouseHandler = (e) => {
     setName(e.target.value);
-  };
+  }; // 마우스 반응 이벤트
 
   const nameKeyHandler = (e) => {
     if (e.key === 'Enter') {
       setName(e.target.value);
     }
-  };
+  }; // 엔더키로 반응 하는 이벤트
+
+  const ageMouseHandler = (e) => {
+    setAge(e.target.value);
+  }; // 마우스 반응 이벤트
 
   const ageKeyHandler = (e) => {
     if (e.key === 'Enter') {
       setAge(e.target.value);
     }
-  };
-
-  const ageMouseHandler = (e) => {
-    setAge(e.target.value);
-  };
+  }; // 엔더키로 반응 하는 이벤트
 
   return (
     <section className='ClickSection'>
