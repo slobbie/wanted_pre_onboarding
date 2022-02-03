@@ -1,6 +1,6 @@
 # wanted_pre_onboarding
 
-[원티드 프리온보딩 코스 선발과제] (https://codestates.notion.site/5f83f7a007664f1abcf0cdbcbbbbd521)
+[원티드 프리온보딩 코스 선발과제](https://codestates.notion.site/5f83f7a007664f1abcf0cdbcbbbbd521)
 
 
 
