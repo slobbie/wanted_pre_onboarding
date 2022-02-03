@@ -13,7 +13,7 @@ const Toggle = () => {
       <h2 className='toggle_h2'>Toggle</h2>
       <div className='contentBox'>
         <div className='toggleSwitchBox' onClick={onToggle}>
-          <div className={`boxiner ${toggle ? 'swichOn' : 'switchOff'}`} />
+          <div className={`boxinner ${toggle ? 'swichOn' : 'switchOff'}`} />
           <button
             onClick={onToggle}
             className={
